@@ -135,30 +135,30 @@ ul {
 
 /* Dark Mode Variables */
 .dark {
-    --color: #FFFFFF;
-    --color1: #FFFFFF;
-    --color2: #FFFFFF;
-    --color3: #FFFFFF;
-    --color4: #FFFFFF;
-    --color5: #2D88FF;
-    --color6: #FFFFFF;
-    --color7: #FFFFFF;
-    --color8:#0ACF83;
-    --color9:#1C2B3A;
-    --bg1: #112032;
-    --bg2: #232E42;
-    --bg3: #2D3B55;
-    --bg4:#2D3B55;
-    --bg5:#232E42;
-    --bg6:#112032;
-    --b-shadow1: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    --b-shadow2: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    --b-shadow3: 0px 6px 12px rgba(0, 0, 0, 0.4);
-    --b-shadow4: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    --b-shadow5: 0px 3px 6px rgba(0, 0, 0, 0.4);
-    --b-shadow6: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    --bcolor1: #232E42;
-    --bcolor2: #232E42;
+    --color: #E2E8F0;
+    --color1: #F7FAFC;
+    --color2: #E2E8F0;
+    --color3: #A0AEC0;
+    --color4: #CBD5E0;
+    --color5: #4299E1;
+    --color6: #F7FAFC;
+    --color7: #CBD5E0;
+    --color8: #48BB78;
+    --color9: #2C5282;
+    --bg1: #1A202C;
+    --bg2: #2D3748;
+    --bg3: #374151;
+    --bg4: #4A5568;
+    --bg5: #2D3748;
+    --bg6: #1A202C;
+    --b-shadow1: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    --b-shadow2: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    --b-shadow3: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    --b-shadow4: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    --b-shadow5: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    --b-shadow6: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    --bcolor1: #4A5568;
+    --bcolor2: #4A5568;
 }
 
 ._layout {
