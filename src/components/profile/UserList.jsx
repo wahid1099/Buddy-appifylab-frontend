@@ -39,7 +39,7 @@ const UserList = ({ users, currentUserId }) => {
         >
           <img
             src={user.profileImage 
-              ? `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'}${user.profileImage}`
+              ? `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://buddy-appifylab-backend.vercel.app'}${user.profileImage}`
               : '/images/profile.png'}
             alt={`${user.firstName} ${user.lastName}`}
             style={{

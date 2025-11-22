@@ -8,7 +8,7 @@ const ProfileHeader = ({ user, isOwnProfile, isFollowing, onEditClick, onFollowC
         width: '100%',
         height: '300px',
         background: user.coverImage 
-          ? `url(${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'}${user.coverImage}) center/cover`
+          ? `url(${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://buddy-appifylab-backend.vercel.app'}${user.coverImage}) center/cover`
           : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         borderRadius: '8px 8px 0 0',
         position: 'relative'
@@ -46,7 +46,7 @@ const ProfileHeader = ({ user, isOwnProfile, isFollowing, onEditClick, onFollowC
           <div style={{ position: 'relative' }}>
             <img
               src={user.profileImage 
-                ? `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'}${user.profileImage}`
+                ? `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://buddy-appifylab-backend.vercel.app'}${user.profileImage}`
                 : '/images/profile.png'}
               alt={`${user.firstName} ${user.lastName}`}
               style={{

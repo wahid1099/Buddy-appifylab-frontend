@@ -90,7 +90,7 @@ const Post = ({ post, onDelete }) => {
       {post.image && (
         <div className="_feed_post_image" style={{ margin: '0 -24px 12px -24px' }}>
           <img 
-            src={`${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'}${post.image}`} 
+            src={`${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://buddy-appifylab-backend.vercel.app'}${post.image}`} 
             alt="Post" 
             className="_post_img" 
             style={{ 
