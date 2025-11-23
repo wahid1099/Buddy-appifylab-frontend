@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../../utils/imageUtils';
 
 const ProfileHeader = ({ user, isOwnProfile, isFollowing, onEditClick, onFollowClick }) => {
   return (
@@ -8,7 +9,7 @@ const ProfileHeader = ({ user, isOwnProfile, isFollowing, onEditClick, onFollowC
         width: '100%',
         height: '300px',
         background: user.coverImage 
-          ? `url(${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://buddy-appifylab-backend.vercel.app'}${user.coverImage}) center/cover`
+          ? `url(${getImageUrl(user.coverImage)}) center/cover`
           : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         borderRadius: '8px 8px 0 0',
         position: 'relative'
@@ -45,9 +46,7 @@ const ProfileHeader = ({ user, isOwnProfile, isFollowing, onEditClick, onFollowC
           {/* Profile Picture */}
           <div style={{ position: 'relative' }}>
             <img
-              src={user.profileImage 
-                ? `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://buddy-appifylab-backend.vercel.app'}${user.profileImage}`
-                : '/images/profile.png'}
+              src={getImageUrl(user.profileImage)}
               alt={`${user.firstName} ${user.lastName}`}
               style={{
                 width: '150px',

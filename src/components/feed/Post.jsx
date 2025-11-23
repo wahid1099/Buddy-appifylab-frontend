@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { likeAPI, commentAPI } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
 import CommentSection from './CommentSection';
+import { getImageUrl } from '../../utils/imageUtils';
 
 const Post = ({ post, onDelete }) => {
   const { user } = useAuth();
@@ -48,7 +49,7 @@ const Post = ({ post, onDelete }) => {
       <div className="_feed_post_header" style={{ marginBottom: '12px' }}>
         <div className="_feed_post_user">
           <img 
-            src={post.author.profileImage || "/images/profile.png"} 
+            src={getImageUrl(post.author.profileImage)} 
             alt="User" 
             className="_post_user_img" 
             style={{ width: '48px', height: '48px', objectFit: 'cover', borderRadius: '50%' }}
@@ -90,7 +91,7 @@ const Post = ({ post, onDelete }) => {
       {post.image && (
         <div className="_feed_post_image" style={{ margin: '0 -24px 12px -24px' }}>
           <img 
-            src={`${import.meta.env.VITE_API_URL?.replace('/api', '') || 'https://buddy-appifylab-backend.vercel.app'}${post.image}`} 
+            src={getImageUrl(post.image)}
             alt="Post" 
             className="_post_img" 
             style={{ 
