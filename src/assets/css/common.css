@@ -87,7 +87,7 @@ a:hover {
 
 a,
 button {
-    transition: .3s all ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:focus-visible {
@@ -133,34 +133,39 @@ ul {
     --bcolor2: #F5F5F5;
 }
 
-/* Dark Mode Variables */
+/* Dark Mode Variables - Modern Palette */
 .dark {
-    --color: #E2E8F0;
-    --color1: #F7FAFC;
-    --color2: #E2E8F0;
-    --color3: #A0AEC0;
-    --color4: #CBD5E0;
-    --color5: #4299E1;
-    --color6: #F7FAFC;
-    --color7: #CBD5E0;
-    --color8: #48BB78;
-    --color9: #2C5282;
-    --bg1: #232E42
-;
-    --bg2: #2D3748;
-    --bg3: #374151;
-    --bg4: #4A5568;
-    --bg5: #112032
-;
-    --bg6: #1A202C;
-    --b-shadow1: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    --b-shadow2: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    --b-shadow3: 0px 6px 12px rgba(0, 0, 0, 0.5);
-    --b-shadow4: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    --b-shadow5: 0px 3px 6px rgba(0, 0, 0, 0.5);
-    --b-shadow6: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    --bcolor1: #4A5568;
-    --bcolor2: #4A5568;
+    /* Text Colors */
+    --color: #F1F5F9;        /* Slate 100 - Primary text */
+    --color1: #FFFFFF;        /* White - Headings */
+    --color2: #E2E8F0;        /* Slate 200 - Secondary text */
+    --color3: #94A3B8;        /* Slate 400 - Muted text */
+    --color4: #CBD5E1;        /* Slate 300 - Medium text */
+    --color5: #3B82F6;        /* Blue 500 - Primary accent (modern vibrant blue) */
+    --color6: #F8FAFC;        /* Slate 50 - Bright text */
+    --color7: #94A3B8;        /* Slate 400 - Subtle text */
+    --color8: #10B981;        /* Emerald 500 - Success/online (vibrant green) */
+    --color9: #1E3A8A;        /* Blue 900 - Deep blue accent */
+    
+    /* Background Colors */
+    --bg1: #0F172A;          /* Slate 900 - Main background (rich dark) */
+    --bg2: #1E293B;          /* Slate 800 - Card background */
+    --bg3: #334155;          /* Slate 700 - Input/elevated background */
+    --bg4: #475569;          /* Slate 600 - Border/divider */
+    --bg5: #0C1220;          /* Custom darker - Deep background */
+    --bg6: #1E293B;          /* Slate 800 - Alternative card */
+    
+    /* Shadows - Modern with subtle glow */
+    --b-shadow1: 0px 4px 6px -1px rgba(0, 0, 0, 0.3), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --b-shadow2: 0px 10px 15px -3px rgba(0, 0, 0, 0.3), 0px 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --b-shadow3: 0px 20px 25px -5px rgba(0, 0, 0, 0.3), 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
+    --b-shadow4: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    --b-shadow5: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    --b-shadow6: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    
+    /* Border Colors */
+    --bcolor1: #334155;      /* Slate 700 */
+    --bcolor2: #475569;      /* Slate 600 */
 }
 
 ._layout {
@@ -235,10 +240,15 @@ ul {
     width: 424px;
     height: 40px;
     padding: 7px 47px;
-    transition:.2s all ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 ._inpt1:hover {
-    border:1px solid var(--color5);
+    border: 1px solid var(--color5);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+._inpt1:focus {
+    border: 1px solid var(--color5);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 /*INPUT PLACEHOLDER*/
@@ -277,10 +287,17 @@ ul {
     font-weight: 500;
     font-size: 16px;
     color: #fff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ._btn1:hover {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: #2563EB;
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4), 0 8px 10px -6px rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+}
+
+._btn1:active {
+    transform: translateY(0);
 }
 
 ._btn2 {

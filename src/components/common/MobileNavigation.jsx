@@ -1,7 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 const MobileNavigation = () => {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
   return (
     <div className="_mobile_navigation_bottom_wrapper">
       <div className="_mobile_navigation_bottom_wrap">
@@ -40,15 +49,13 @@ const MobileNavigation = () => {
                     <span className="_counting">2</span>
                   </Link>
                 </li>
-                <div className="_header_mobile_toggle">
-                  <form action="/mobileMenu.html">
-                    <button type="submit" className="_header_mobile_btn_link" value="go to mobile menu">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="none" viewBox="0 0 18 14">
-                        <path stroke="#666" strokeLinecap="round" strokeWidth="1.5" d="M1 1h16M1 7h16M1 13h16"/>
-                      </svg>
-                    </button>
-                  </form>
-                </div>
+                <li className="_mobile_navigation_bottom_item">
+                  <button onClick={handleLogout} className="_mobile_navigation_bottom_link" style={{ background: 'none', border: 'none', padding: 0 }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path className="_dark_svg" stroke="#666" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+                    </svg>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
